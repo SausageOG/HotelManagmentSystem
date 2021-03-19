@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelSys"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="471.518" Width="687.734">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GridSplitter Grid.Column="1" Width="4" ShowsPreview="False" HorizontalAlignment="Center"/>
+
+        <!-- Left side : list of visitors -->
+        <StackPanel Grid.Column="0">
+            <Label Content="List of visitors" FontSize="23" HorizontalContentAlignment="Center" Width="200" Height="35" Margin="0 , 40 , 0 , 0"/>
+            <ListBox Width="250" Height="300"/>
+        </StackPanel>
+
+        <!-- Right sige : hotel panel -->
+        <Grid Grid.Column="2" Height="280" Width="250" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="129*"/>
+                <ColumnDefinition Width="209*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Labels(name , age .....) -->
+            <Label Content="Name :" Grid.Row="0" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Height="26" Width="48"/>
+            <Label Content="Last name :" Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Height="26" Width="70"/>
+            <Label Content="Age :" Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Height="26" Width="48"/>
+            <Label Content="Room :" Grid.Row="3" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Height="26" Width="48"/>
+
+            <TextBox Height="20" Width="100" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBox Height="20" Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBox Height="20" Width="100" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left"/>
+            <TextBox Height="20" Width="100" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left"/>
+        </Grid>
     </Grid>
 </Window>
