@@ -15,13 +15,20 @@
         <GridSplitter Grid.Column="1" Width="4" ShowsPreview="False" HorizontalAlignment="Center"/>
 
         <!-- Left side : list of visitors -->
-        <StackPanel Grid.Column="0">
-            <Label Content="List of visitors" FontSize="23" HorizontalContentAlignment="Center" Width="200" Height="35" Margin="0 , 40 , 0 , 0"/>
-            <ListBox Width="250" Height="300"/>
-        </StackPanel>
+        <TabControl Grid.Column="0">
+            <TabItem Header="Hotel visitors">
+                <StackPanel>
+                    <Label Content="List of visitors" FontSize="23" HorizontalContentAlignment="Center" Width="200" Height="35" Margin="0 , 40 , 0 , 0"/>
+                    <ListBox Width="250" Height="300"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Hotel rooms">
+                <Label Content="SOON"/>
+            </TabItem>
+        </TabControl>
 
         <!-- Right sige : hotel panel -->
-        <Grid Grid.Column="2" Height="280" Width="250" VerticalAlignment="Top">
+        <Grid Grid.Column="2" Height="280" Width="260" VerticalAlignment="Top">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -40,10 +47,22 @@
             <Label Content="Age :" Grid.Row="2" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Height="26" Width="48"/>
             <Label Content="Room :" Grid.Row="3" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Height="26" Width="48"/>
 
-            <TextBox Height="20" Width="100" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"/>
-            <TextBox Height="20" Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"/>
-            <TextBox Height="20" Width="100" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left"/>
-            <TextBox Height="20" Width="100" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left"/>
+            <!-- TextBoxes for name age etс. -->
+            <TextBox Height="20" Width="100" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center"/>
+            <TextBox Height="20" Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center"/>
+            <TextBox Height="20" Width="100" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center"/>
+            <!-- TODO: create rooms -->
+            <ComboBox Height="20" Width="100" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left">
+                <ComboBoxItem Content="1 r. simple for one person"/>
+            </ComboBox>
+
+            <WrapPanel Grid.Row="4" Grid.ColumnSpan="2">
+                <Button Content="Add" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Height="20" Width="80" Margin="5"/>
+                <Button Content="Remove" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Height="20" Width="80"/>
+                <Button Content="Edit" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Height="20" Width="80" Margin="5"/>
+            </WrapPanel>
+            
+
         </Grid>
     </Grid>
 </Window>
