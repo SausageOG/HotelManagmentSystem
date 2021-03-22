@@ -55,7 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Visitor.cs" />
+    <Compile Include="Models\MainModel.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\Visitor.cs" />
+    <Compile Include="ViewModel\HotelRoomsVM.cs" />
+    <Compile Include="ViewModel\HotelVisitorsVM.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

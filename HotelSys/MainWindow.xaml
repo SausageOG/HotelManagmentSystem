@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelSys"
+        xmlns:vm="clr-namespace:HotelSys.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="471.518" Width="687.734">
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -14,12 +18,21 @@
         </Grid.ColumnDefinitions>
         <GridSplitter Grid.Column="1" Width="4" ShowsPreview="False" HorizontalAlignment="Center"/>
 
-        <!-- Left side : list of visitors -->
+        <!--!!!! Left side : list of visitors !!!!-->
         <TabControl Grid.Column="0">
             <TabItem Header="Hotel visitors">
                 <StackPanel>
-                    <Label Content="List of visitors" FontSize="23" HorizontalContentAlignment="Center" Width="200" Height="35" Margin="0 , 40 , 0 , 0"/>
-                    <ListBox Width="250" Height="300"/>
+                    <Label Content="List of visitors" FontSize="23" HorizontalContentAlignment="Center" Width="200" Height="35" Margin="0 , 20 , 0 , 0"/>
+                    <ListView Height="300" Width="280">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="50">Name</GridViewColumn>
+                                <GridViewColumn Width="75">Last name</GridViewColumn>
+                                <GridViewColumn Width="50">Age</GridViewColumn>
+                                <GridViewColumn Width="100">Room number</GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Hotel rooms">
@@ -27,7 +40,7 @@
             </TabItem>
         </TabControl>
 
-        <!-- Right sige : hotel panel -->
+        <!--!!!! Right sige : hotel panel !!!!-->
         <Grid Grid.Column="2" Height="280" Width="260" VerticalAlignment="Top">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -53,7 +66,8 @@
             <TextBox Height="20" Width="100" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalContentAlignment="Center"/>
             <!-- TODO: create rooms -->
             <ComboBox Height="20" Width="100" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left">
-                <ComboBoxItem Content="1 r. simple for one person"/>
+                <ComboBoxItem Content="Standart for 1 person"/>
+                <ComboBoxItem Content="Standart for 2 people"/>
             </ComboBox>
 
             <WrapPanel Grid.Row="4" Grid.ColumnSpan="2">

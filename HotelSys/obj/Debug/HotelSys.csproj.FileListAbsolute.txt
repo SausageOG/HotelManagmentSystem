@@ -1,7 +1,6 @@
 C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\bin\Debug\HotelSys.exe.config
 C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\bin\Debug\HotelSys.exe
 C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\bin\Debug\HotelSys.pdb
-C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug\HotelSys.csprojAssemblyReference.cache
 C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug\MainWindow.g.cs
 C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug\App.g.cs
 C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug\HotelSys_MarkupCompile.cache
@@ -13,3 +12,5 @@ C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug
 C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug\HotelSys.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug\HotelSys.exe
 C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug\HotelSys.pdb
+C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\Desktop\CODE\C#\WPF\InProcess\HotelManagmentSys\HotelSys\obj\Debug\HotelSys.csprojAssemblyReference.cache
