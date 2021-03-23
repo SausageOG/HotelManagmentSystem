@@ -1,4 +1,4 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
 
 namespace HotelSys.Models
 {
@@ -13,12 +13,9 @@ namespace HotelSys.Models
     {
         private RoomType _roomType;
         private int _id;
-        private string _title;
-        private int _max;
+        private string _roomNum;
+        private IList<Visitor> _visitors;
 
-
-        private ObservableCollection<Visitor> _visitors;
-        public ObservableCollection<Visitor> Visitors { get { return _visitors; } set { _visitors = value; } }
 
         public RoomType Type
         {
@@ -36,29 +33,25 @@ namespace HotelSys.Models
                 _id = value;
             }
         }
-        public string Title
+        public string RoomNumber
         {
-            get { return _title; }
+            get { return _roomNum; }
             set
             {
-                _title = value;
+                _roomNum = value;
             }
         }
-
-
-        public Room(string title, int max)
+        public IList<Visitor> Visitors
         {
-            _title = title;
-            _max = max;
+            get { return _visitors; }
+            set
+            {
+                _visitors = value;
+            }
         }
-
-        public void AddVisitor(Visitor visitor)
+        public Room()
         {
-            _visitors.Add(visitor);
-        }
-        public void DeleteVisitor(Visitor visitor)
-        {
-            _visitors.Remove(visitor);
+            _visitors = new List<Visitor>();
         }
     }
 }

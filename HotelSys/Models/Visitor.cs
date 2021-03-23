@@ -1,4 +1,6 @@
-﻿namespace HotelSys
+﻿using HotelSys.Models;
+
+namespace HotelSys
 {
     class Visitor
     {
@@ -6,17 +8,16 @@
         private string _name;
         private string _lastName;
         private int _age;
-        private int _room;
+        private Room _visitorRoom;
 
 
 
         public Visitor() { }
-        public Visitor(string name, string lastName, int age, int room)
+        public Visitor(string name, string lastName, int age)
         {
             _name = name;
             _lastName = lastName;
             _age = age;
-            _room = room;
         }
 
         public int Id
@@ -51,12 +52,12 @@
                 _age = value;
             }
         }
-        public int Room
+        public Room Room
         {
-            get { return _room; }
+            get { return _visitorRoom; }
             set
             {
-                _room = value;
+                _visitorRoom = value;
             }
         }
     }

@@ -9,14 +9,21 @@ namespace HotelSys.Models
 
 
         private ObservableCollection<Room> _rooms;
+        private ObservableCollection<Visitor> _visitors;
 
 
-        public ObservableCollection<Visitor> Visitors => room.Visitors;
-        public ObservableCollection<Room> Rooms { get { return _rooms; } set { _rooms = value; } }
+        public ObservableCollection<Visitor> Visitors => _visitors;
+        public ObservableCollection<Room> Rooms => _rooms;
 
         public MainModel()
         {
             room = new Room();
         }
+
+        public void AddVisitor(Visitor visitor)
+        {
+            
+        }
+
     }
 }
